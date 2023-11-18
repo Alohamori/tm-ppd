@@ -1,0 +1,102 @@
+* {
+  margin: 0; padding: 0; border: 0;
+  font: inherit; font-size: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+@font-face { font-family: 'SpecialElite'; src: url(SpecialElite.ttf); }
+
+body {
+  background-color: #090a13;
+  background-image: url(bg.png);
+  color: #dbd3d8;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1 { font-family: SpecialElite; font-size: 150%; text-align: center; }
+h2 { font-family: SpecialElite; font-size: 90%; font-weight: bold; padding: 0.3em 0; }
+
+#help { text-align: center; font-family: SpecialElite; }
+#legend { display: inline-flex; }
+.mark {
+  width: 1.5em;
+  aspect-ratio: 1/1;
+  border: 1px solid #dbd3d8;
+  margin: 0.5em;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+table.series {
+  table-layout: fixed;
+  width: 80%;
+  margin: auto;
+  border-spacing: 0.75em;
+}
+th, td { text-align: center; vertical-align: middle; }
+th.split { font-size: 0.75em; }
+th.split :nth-child(1) { text-align: right; margin-left: 2em; }
+th.split :nth-child(2) { text-align: left; margin-right: 2em; }
+.label { background-color: #0e0f18; }
+
+div.episode { display: flex; }
+div.episode div { flex-grow: 1; height: 0.5em; margin: 0.1em 0.075em; }
+div.sweep { border: 2px solid #dea420; }
+
+#tip {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  width: 20em;
+  padding: 0.25em;
+  text-align: center;
+  opacity: 0.95;
+  border-radius: 0.25em;
+}
+
+#scores { width: 60%; margin: auto; font-weight: bold; }
+.score { display: inline-block; width: 30%; margin: 1%; }
+.score:nth-child(n + 3) { width: 20%; }
+.port {
+  background-image: url(ports.jpg);
+  background-size: 500%;
+  aspect-ratio: 33/41;
+}
+
+.d0 { background-color: #14151e; }
+.d1 { background-color: #333c45; }
+.d2 { background-color: #294767; }
+.d3 { background-color: #29a869; color: #1a1a1a; }
+.d4 { background-color: #aad332; color: #1a1a1a; }
+.d5 { background-color: #dcdf84; color: #1a1a1a; }
+
+#bubbles { width: 60%; margin: 1em auto; }
+.bubble {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-position: center 15%;
+  background-size: cover;
+  width: 11.5%;
+  aspect-ratio: 1 / 1;
+  margin: 0.5%;
+  border: 2px solid #666;
+  border-radius: 50%;
+  opacity: 0.75;
+} .bubble:hover { opacity: 1; border-color: #dbd3d8; }
+.bubble span {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.tap {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
